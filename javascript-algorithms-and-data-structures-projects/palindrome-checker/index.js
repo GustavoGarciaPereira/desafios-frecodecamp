@@ -16,12 +16,13 @@ and 2_A3*3#A2.
 
 */
 
-
 function palindrome(str) {
-  
-  return str.split("_").reverse().join("") === str;
+  return(
+    //regex para tirar os caracteres especiais
+    //e funcao para deichar as letrar LowerCase
+    str.replace(/[\W_]/g,"").toLowerCase() ===
+    str.replace(/[\W_]/g,"").toLowerCase().split("").reverse().join("")
+  );
 }
-  
-  
-  
-  console.log(palindrome("eye"));
+
+console.log(palindrome("A man, a plan, a canal. Panama"));
