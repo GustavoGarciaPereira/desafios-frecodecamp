@@ -17,25 +17,30 @@ function convertToRoman(num) {
       500:'D',
       1000:'M'
     }
-  let ara = [1,
-             5,
-             10,
-             50,
-             100,
-             500,
-             1000
-]
-   
-    let q = Object.keys(ro).filter((q)=>{
 
-        if(q == num){
-            return ro[q]
-        }
-        
-    })
 
-  return q;
+  for(let i in Object.keys(ro)){
+    
+      if(Object.keys(ro)[i]>num){
+        return Object.keys(ro)[i]
+      }
+
+
+
+    
+    //if(Object.keys(ro)[i] == num){
+    //  return ro[Object.keys(ro)[i]]
+    //}else{
+    //  let inte = Number(Object.keys(ro)[i])
+    //  console.log(inte)
+    //  return inte
+    //  //while(ini == )
+    //}
   }
   
-  const q = convertToRoman(10);
+  return "";
+
+  }
+  
+  const q = convertToRoman(30);
   console.log(q)
